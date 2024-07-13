@@ -33,7 +33,12 @@ foreach ($invoices as $invoice) {
             text-align: center;
         }
         th {
-            background-color: #ffffff;
+            background-color: #f1f1f1;
+        }
+        .total-row {
+            font-weight: bold;
+            background-color: #333;
+            color: white;
         }
     </style>
 </head>
@@ -57,7 +62,7 @@ foreach ($invoices as $invoice) {
                     <td><?php echo number_format($invoice['total'], 2); ?></td>
                 </tr>
             <?php } ?>
-            <tr>
+            <tr class='total-row'>
                 <td colspan="2"><strong>TOTAL</strong></td>
                 <td><?php echo $totalQty; ?></td>
                 <td><?php echo number_format($totalAmount, 2); ?></td>
